@@ -28,9 +28,17 @@
 <body>
   <header class="primary-header">
     <div class="container">
+      <div class="nav-wrapper">
       <a href="#"><img src="images/logo.svg" alt="Manage"></a>
-      <nav class="primary-navigation">
-        <ul role='list' class="nav-list">
+      <!-- using aria -->
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <img class="icon-hamburger" src="images/icon-hamburger.svg" alt="" aria-hidden="true">
+        <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true">
+
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="primary-navigation" id="primary-navigation">
+        <ul role='list' class="nav-list" >
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">About Us</a></li>
@@ -39,12 +47,13 @@
         </ul>
       </nav>
       <!-- defaultbutton -->
-      <button class="button">Get Started</button>
+      <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
+    </div>
     </div>
   </header>
 
   <main>
-    <section>
+    <section class="padding-block-900">
       <div class="container">
         <div class="even-columns">
           <div>
@@ -60,7 +69,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="padding-block-900">
       <div class="container">
         <div class="even-columns">
           <div>
@@ -96,14 +105,14 @@
       </div>
     </section>
 
-    <section class="carousel">
-      <h2 class="fs-secondary-heading"> What they’ve said</h2>
+    <section class="carousel | padding-block-700">
+      <h2 class="fs-secondary-heading fw-bold"> What they’ve said</h2>
       <!-- carousel here -->
       <button class="button">Get Started</button>
     </section>
 
     <!-- |for pipe https://youtube.com/clip/Ugkx1UXGy-RSsSXGhHODgPUEbAbA2q9rNIop -->
-    <section class="cta | bg-primary-400 text-neutral-100">
+    <section class="cta | bg-accent-400 text-neutral-100 padding-block-700">
       <div class="conatiner">
         <div class="even-columns">
           <div>
@@ -117,7 +126,7 @@
     </section>
   </main>
 
-  <footer class="bg-neutral-900 text-neutral-100">
+  <footer class="padding-block-700 bg-neutral-900 text-neutral-100">
     <div class="container">
       <div class="even-columns">
         <div>
@@ -177,6 +186,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
